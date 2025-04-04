@@ -1,0 +1,15 @@
+# Ignore Ruby bundle install directory
+/vendor/
+
+# Ignore Jekyll build output
+/_site/
+
+# Ignore gem files
+*.gem
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific junk
+.DS_Store
+Thumbs.db
