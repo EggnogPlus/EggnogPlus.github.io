@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
 title: Oliver's homepage
-description: Bookmark this to keep an eye on my project updates 
+description: "Welcome to my personal GitHub Page"
+baseurl: ""
+url: "https://eggnogplus.github.io"
+theme: jekyll-theme-slate
