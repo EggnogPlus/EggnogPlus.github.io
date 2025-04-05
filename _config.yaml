@@ -1,3 +1,9 @@
-theme: jekyll-theme-minimal
-title: Oliver's homepage
-description: "Welcome to my personal GitHub Page"
+title: "Oliver Barclay"
+description: "My personal github site"
+author: "Oliver Barclay"
+include:
+  - assets/html
+  - assets/js
+  - assets/css  # Add this line
+baseurl: ""
+url: "https://username.github.io"

@@ -1,4 +1,67 @@
----
----
+html {
+    height: 100%; /* Ensure html fills the viewport */
+}
 
-@import "{{ site.theme }}";
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #000 !important; /* Force black, override any defaults */
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%; /* Fill the html height */
+}
+
+#asciiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.content-pane {
+    background: rgba(0, 0, 0, 0.6);
+    width: 70%;
+    max-width: 800px;
+    min-height: 100vh;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content-pane h1, .content-pane h2 {
+    margin: 0 0 20px 0;
+}
+
+.content-pane p {
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+.icon {
+    text-decoration: none;
+    margin-right: 0; /* Adjust as needed */
+    padding-right: 0; /* Adjust as needed */
+}
