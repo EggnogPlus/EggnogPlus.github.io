@@ -43,7 +43,7 @@ body {
 }
 
 .content-pane h1, .content-pane h2 {
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
 }
 
 .content-pane p {
@@ -51,8 +51,12 @@ body {
     line-height: 1.6;
 }
 
+.barrage-demo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 a {
-    color: purple;
     text-decoration: none;
 }
 
