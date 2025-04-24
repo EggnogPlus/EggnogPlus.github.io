@@ -18,6 +18,14 @@ function autoScrollCarousel(id) {
         return;
     }
 
+    // Set container width to accommodate all slides
+    container.style.width = `${slides.length * 100}%`;
+
+    // Set each slide's width to 100% / number of slides
+    Array.from(slides).forEach(slide => {
+        slide.style.width = `${100 / slides.length}%`;
+    });
+
     let index = 0;
     const total = slides.length;
     let intervalId = null;
@@ -42,7 +50,7 @@ function autoScrollCarousel(id) {
 
     function updateCarousel() {
         isTransitioning = true;
-        container.style.transform = `translateX(-${100 * index}%)`;
+        container.style.transform = `translateX(-${(100 / total) * index}%)`;
         // Update active dot
         const dots = dotsContainer.querySelectorAll('.carousel-dot');
         dots.forEach((dot, i) => {
@@ -59,10 +67,9 @@ function autoScrollCarousel(id) {
                 }
             }
         }
-        // Reset transition flag after animation
         setTimeout(() => {
             isTransitioning = false;
-        }, 500); // Match CSS transition duration (0.5s)
+        }, 500);
     }
 
     function slide() {
