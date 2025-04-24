@@ -116,5 +116,5 @@ function autoScrollCarousel(id) {
 
 // Initialize carousels on page load
 document.addEventListener('DOMContentLoaded', () => {
-    ['carousel1', 'carousel2', 'carousel3', 'carousel4'].forEach(autoScrollCarousel);
+    ['carousel1', 'carousel2', 'carousel3', 'carousel4', 'carousel5'].forEach(autoScrollCarousel);
 });

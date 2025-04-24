@@ -30,7 +30,7 @@ body {
 
 .content-pane {
     background: rgba(0, 0, 0, 0.6);
-    width: 60%;
+    width: 70%;
     min-height: 100vh;
     padding: 40px;
     color: white;
@@ -79,6 +79,14 @@ body {
     margin-bottom: 40px;
 }
 
+.ballistic-demo iframe {
+    width: 75%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
 li {
     padding: 5px;
 }
@@ -99,6 +107,19 @@ a:visited {
 }
 
 /* === Project Sections Styling === */
+.project-sections-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1000px) {
+    .project-sections-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-section {
     max-width: 100%;
     box-sizing: border-box;
