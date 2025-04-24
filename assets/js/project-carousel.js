@@ -75,7 +75,7 @@ function autoScrollCarousel(id) {
     function startAutoScroll() {
         clearInterval(intervalId);
         // Set longer interval for video slide (index 0 for carousel2)
-        const isVideoSlide = id === 'carousel2' && index === 0;
+        const isVideoSlide = (id === 'carousel2' && index === 0) || (id === 'carousel4' && index === 0 || 1 || 2);
         const interval = isVideoSlide ? 8000 : 4000; // 8s for video, 4s for images
         intervalId = setInterval(slide, interval);
     }

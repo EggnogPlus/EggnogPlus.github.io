@@ -50,6 +50,29 @@ body {
     line-height: 1.6;
 }
 
+.profile-container {
+    display: flex;
+    align-items: stretch; /* Makes children stretch to match container height */
+    gap: 20px; /* Space between image and text */
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+.profile-image {
+    width: 150px; /* Adjust width as needed */
+    height: 100%; /* Stretches to match container height */
+    object-fit: cover; /* Ensures image fills space without distortion */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.profile-text {
+    flex: 1; /* Takes remaining space */
+    text-align: left; /* Keeps text left-aligned */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers text content */
+}
+
 .ballistic-demo {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -76,7 +99,7 @@ a:visited {
 
 /* === Project Sections Styling === */
 .project-section {
-    border: 2px solid rebeccapurple;
+    border: 2px whitesmoke solid;
     border-radius: 12px;
     padding: 1rem;
     margin-bottom: 2rem;
