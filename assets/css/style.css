@@ -236,3 +236,44 @@ a:visited {
     cursor: default;
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    .content-pane {
+        width: 95%;
+        padding: 20px; /* Less padding so content has room to breathe */
+    }
+
+    /* 2. Stack the profile image and text vertically */
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-text {
+        text-align: center; /* Centers the "About Me" text */
+    }
+
+    /* 3. Make the Ballistic Demo take up the full available width */
+    .ballistic-demo iframe {
+        width: 100%;
+    }
+
+    /* 4. Fix the weirdly sized project boxes by reducing carousel height */
+    .carousel {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .carousel-container {
+        height: 250px; /* Prevents the boxes from being awkwardly tall on mobile */
+    }
+
+    /* 5. Center project titles, descriptions, and tags for a cleaner mobile UI */
+    .project-title, .project-desc {
+        text-align: center;
+    }
+
+    .tags {
+        justify-content: center;
+    }
+}
