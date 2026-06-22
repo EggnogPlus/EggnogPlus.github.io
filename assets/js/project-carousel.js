@@ -42,7 +42,6 @@ function autoScrollCarousel(id) {
         if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => {
             if (isTransitioning) return;
-            clearInterval(intervalId);
             currentIndex = i;
             updateCarousel();
             startAutoScroll();
@@ -81,12 +80,11 @@ function autoScrollCarousel(id) {
     }
 
     /**
-     * Advances to the next slide and restarts auto-scroll.
+     * Advances to the next slide.
      */
     function slide() {
         currentIndex = (currentIndex + 1) % totalSlides;
         updateCarousel();
-        clearInterval(intervalId);
         startAutoScroll();
     }
 
@@ -95,9 +93,9 @@ function autoScrollCarousel(id) {
      */
     function startAutoScroll() {
         clearInterval(intervalId);
-        const isVideoSlide = (id === 'carousel2' && currentIndex === 0) ||
-            (id === 'carousel4' && [0, 1, 2].includes(currentIndex));
-        const interval = isVideoSlide ? 8000 : 4000; // 8s for videos, 4s for images
+        // Use a longer interval for video slides to allow them to play
+        const isVideoSlide = slides[currentIndex].tagName === 'VIDEO';
+        const interval = isVideoSlide ? 8000 : 4000;
         intervalId = setInterval(slide, interval);
     }
 

@@ -4,6 +4,6 @@ author: "Oliver Barclay"
 include:
   - assets/html
   - assets/js
-  - assets/css  # Add this line
+  - assets/css
 baseurl: ""
-url: "https://username.github.io"
+url: "https://eggnogplus.github.io"
